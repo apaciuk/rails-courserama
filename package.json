@@ -1,0 +1,22 @@
+{
+  "name": "rails_course_site",
+  "private": true,
+  "dependencies": {
+    "@popperjs/core": "^2.9.2",
+    "@rails/actioncable": "^6.0.0",
+    "@rails/activestorage": "^6.0.0",
+    "@rails/ujs": "^6.0.0",
+    "@rails/webpacker": "4.3.0",
+    "bootstrap": "^5.0.2",
+    "expose-loader": "^3.0.0",
+    "local-time": "^2.1.0",
+    "turbolinks": "^5.2.0",
+    "vue": "^2.6.14",
+    "vue-loader": "^16.3.0",
+    "vue-template-compiler": "^2.6.14"
+  },
+  "version": "0.1.0",
+  "devDependencies": {
+    "webpack-dev-server": "^3.11.2"
+  }
+}
