@@ -1,11 +1,10 @@
-// $navbar-default-bg: #312312;
+$navbar-dark-bg: #2a4c8d;
 // $light-orange: #ff8c00;
 // $navbar-default-color: $light-orange;
 
 @import "font-awesome-sprockets";
 @import "font-awesome";
 @import "bootstrap";
-@import "jumpstart/sticky-footer";
 @import "jumpstart/announcements";
 
 // Fixes bootstrap nav-brand container overlap
@@ -19,4 +18,7 @@
 // Masquerade alert shouldn't have a bottom margin
 body > .alert {
   margin-bottom: 0;
+}
+.navbar-dark {
+background-color:#2a4c8d!important;
 }
