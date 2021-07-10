@@ -24,3 +24,6 @@ document.addEventListener("turbolinks:load", () => {
     return new bootstrap.Popover(popoverTriggerEl)
   })
 })
+
+require("trix")
+require("@rails/actiontext")

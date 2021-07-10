@@ -7,12 +7,11 @@
     Edit
   <% end %>
   </div>
-  <h1>Show course: <%= @course.title %></h1>
+  <h2><%= @course.title %></h2>
 </div>
-
-<dl class="dl-horizontal">
-  <dt>Title:</dt>
-  <dd><%= @course.title %></dd>
-  <dt>Description:</dt>
-  <dd><%= @course.description %></dd>
-</dl>
+<div class="card">
+<div class="card-body">
+ <h3>Description</h3>
+<p><%= @course.description %></p>
+</div>
+</div>
