@@ -59,12 +59,13 @@ class CoursesController < ApplicationController
       format.json { head :no_content }
     end
   end
-
-  private
     # Use callbacks to share common setup or constraints between actions.
     def set_course
       @course = Course.find(params[:id])
     end
+
+  private
+  
 
     # Only allow a list of trusted parameters through.
     def course_params
