@@ -1,6 +1,8 @@
+<div class="row mt-5 mb-5">
 <h1>Notifications</h1>
-
-<ul>
+<div class="card">
+  <div class="card-body">
+   <ul>
   <% @notifications.each do |notification| %>
     <%# Customize your notification format here. We typically recommend a `message` and `url` method on the Notification classes. %>
     <%#= link_to notification.message, notification.url %>
@@ -8,3 +10,13 @@
     <li><%= notification.params %></li>
   <% end %>
 </ul>
+
+    <% if @notifications.empty? %>
+      <div>Exciting notifications coming very soon!</div>
+    <% end %>
+  </div>
+</div>
+</div>
+
+
+</div>
