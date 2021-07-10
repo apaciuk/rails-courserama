@@ -1,4 +1,4 @@
-$navbar-dark-bg: #2a4c8d;
+$navbar-dark-bg: #473884;
 // $light-orange: #ff8c00;
 // $navbar-default-color: $light-orange;
 
@@ -20,5 +20,20 @@ body > .alert {
   margin-bottom: 0;
 }
 .navbar-dark {
-background-color:#2a4c8d!important;
+background-color:#473884!important;
+}
+.has-search .form-control {
+  padding-left: 2.375rem;
+}
+
+.has-search .form-control-feedback {
+  position: absolute;
+  z-index: 2;
+  display: block;
+  width: 2.375rem;
+  height: 2.375rem;
+  line-height: 2.375rem;
+  text-align: center;
+  pointer-events: none;
+  color: #aaa;
 }

@@ -1,0 +1,16 @@
+<div class="page-header">
+  <%= link_to courses_path, class: 'btn btn-default' do %>
+    All Courses
+  <% end %>
+  <%= link_to edit_course_path(@course), class: 'btn btn-primary' do %>
+    Edit
+  <% end %>
+  <h1>Show course</h1>
+</div>
+
+<dl class="dl-horizontal">
+  <dt>Title:</dt>
+  <dd><%= @course.title %></dd>
+  <dt>Description:</dt>
+  <dd><%= @course.description %></dd>
+</dl>
