@@ -52,7 +52,15 @@ group :test do
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
-gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+gem 'money-rails'
+gem 'acts_as_votable'
+gem 'cocoon'
+gem 'omnicontacts'
+gem 'devise_invitable'
+gem 'discard'
+gem 'omniauth'
+gem 'geocoder'
+gem 'rack-attack'
 gem 'simple_form'
 gem 'bootstrap', '5.0.0'
 gem 'devise', '~> 4.8', '>= 4.8.0'

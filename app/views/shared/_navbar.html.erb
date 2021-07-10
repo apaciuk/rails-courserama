@@ -18,10 +18,12 @@
       </ul>
      
       <ul class="navbar-nav">
-     <div class="form-group has-search">
-    <span class="fa fa-search form-control-feedback"></span>
-    <input type="text" class="form-control" placeholder="Search Courses">
-  </div>
+     <%= form_tag(courses_path, :method => "get",   
+     class: 'navbar-form navbar-left') do %>  
+     <div class="input-group">  
+     <%= text_field_tag :title, params[:title], placeholder: "Search Courses By Title", class: "form-control" %>  
+     </div>  
+     <% end %>
         <li class="nav-item"><%= link_to "News", announcements_path, class: "nav-link mx-2 #{unread_announcements(current_user)}" %></li>
           <li class="nav-item"><%= link_to "Latest Courses", courses_path, class: "btn btn-info nav-link" %></li>
         <% if user_signed_in? %>
