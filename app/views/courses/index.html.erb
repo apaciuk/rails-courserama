@@ -1,27 +1,28 @@
+
 <div class="mt-5 mb-5">
- <h1>Listing Courses</h1>
-    <%= @courses.count %>
+
+<h1>Listing Courses</h1>
+<h3 class="mb-3">Total Courses: <%= @courses.count %> Courses</h3>
 <div class="container">
   <div class="row align-items-start">
-    <div class="col">
-  <% @courses.each do |course| %>
+   <% @courses.each do |course| %>
+     <div class="col-4">
     <%= render 'courses/course', course: course %>
+  </div>
     <% end %>
   </div>
   </div>
-  </div>
-  
-</div>
-    <h1>Listing Courses</h1>
-    <%= @courses.count %>
-    <% @courses.each do |course| %>
-    <%= render 'courses/course', course: course %>
-    <% end %>
-<div class="col-sm-6 text-right">
+  <div class="col-sm-6 text-right">
   <%= link_to new_course_path, class: 'btn btn-primary' do %>
     Add New Course
   <% end %>
   </div>
   </div>
+   
+   
+   
+   
+   
+
 
 
