@@ -47,7 +47,7 @@
               <%= link_to "Logout", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
             </div>
           </li>
-         <li class="nav-item"><%= link_to "Courses", courses_path, class: "btn btn-success nav-link mx-2" %></li>
+         <li class="nav-item"><%= link_to "Add New Course", new_course_path, class: "btn btn-success nav-link mx-2" %></li>
                 
 
         <% else %>
@@ -58,3 +58,4 @@
      </div>
   </div>
 </nav>
+ 
