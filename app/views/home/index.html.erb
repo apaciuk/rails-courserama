@@ -1,6 +1,5 @@
 <main>
-
-  <div class="container py-4">
+<div class="container py-4 course-grid">
     <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
       <div class="col-10 col-sm-8 col-lg-6">
         <img src="/assets/bootstrap-themes.png" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" width="700" height="500" loading="lazy">
@@ -8,24 +7,23 @@
       <div class="col-lg-6">
         <h1 class="display-5 fw-bold lh-1 mb-3">Welcome To Courserama!</h1>
         <p class="lead">Quickly learn the latest technologies from the worlds best tutors. featuring all major programming languages and database languages, proprietory and open source. Its gonna be awesome!</p>
-        <div class="d-grid gap-2 d-md-flex justify-content-md-start">
-        <div class="search"> <input type="text" class="search-input" placeholder="Search For Courses..." name=""> <a href="#" class="search-icon"> <i class="fa fa-search"></i> </a> </div>
-        </div>
+      <%= form_tag(courses_path, :method => "get",   
+     class: 'search') do %>  
+     <div class="input-group">  
+     <%= text_field_tag :title, params[:title], placeholder: "Search All Courses", class: "form-control" %>  
+ 
+     </div> 
+     <% end %>
       </div>
     </div>
-  </div>
+   
+  
 
-
-
-
-    <div class="container px-4 py-5" id="custom-cards">
-    <h2 class="pb-2 border-bottom">Course Categories</h2>
-
-    <div class="row row-cols-1 row-cols-lg-3 align-items-stretch g-4 py-5">
+ <div class="row row-cols-1 row-cols-lg-3 align-items-stretch g-4 py-5">
       <div class="col">
-        <div class="card card-cover h-100 overflow-hidden text-white bg-dark rounded-5 shadow-lg" style="background-image: url('unsplash-photo-1.jpg');">
+        <div class="card card-cover h-100 overflow-hidden text-white bg-dark rounded-5 shadow-lg" style="background-image: url('https://picsum.photos/500/300');">
           <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
-            <h2 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">Short title, long jacket</h2>
+            <h2 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">Popular Courses</h2>
             <ul class="d-flex list-unstyled mt-auto">
               <li class="me-auto">
                 <img src="https://github.com/twbs.png" alt="Bootstrap" width="32" height="32" class="rounded-circle border border-white">
@@ -42,11 +40,10 @@
           </div>
         </div>
       </div>
-
-      <div class="col">
-        <div class="card card-cover h-100 overflow-hidden text-white bg-dark rounded-5 shadow-lg" style="background-image: url('unsplash-photo-2.jpg');">
+ <div class="col">
+        <div class="card card-cover h-100 overflow-hidden text-white bg-dark rounded-5 shadow-lg" style="background-image: url('https://picsum.photos/500/300');">
           <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
-            <h2 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">Much longer title that wraps to multiple lines</h2>
+            <h2 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">Top Rated Courses</h2>
             <ul class="d-flex list-unstyled mt-auto">
               <li class="me-auto">
                 <img src="https://github.com/twbs.png" alt="Bootstrap" width="32" height="32" class="rounded-circle border border-white">
@@ -65,9 +62,9 @@
       </div>
 
       <div class="col">
-        <div class="card card-cover h-100 overflow-hidden text-white bg-dark rounded-5 shadow-lg" style="background-image: url('unsplash-photo-3.jpg');">
+        <div class="card card-cover h-100 overflow-hidden text-white bg-dark rounded-5 shadow-lg" style="background-image: url('https://picsum.photos/500/300');">
           <div class="d-flex flex-column h-100 p-5 pb-3 text-shadow-1">
-            <h2 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">Another longer title belongs here</h2>
+            <h2 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">Most Recent Courses</h2>
             <ul class="d-flex list-unstyled mt-auto">
               <li class="me-auto">
                 <img src="https://github.com/twbs.png" alt="Bootstrap" width="32" height="32" class="rounded-circle border border-white">
@@ -85,6 +82,15 @@
         </div>
       </div>
     </div>
+    </div>
+  <div class="container" style="background:#efefef;padding:20px;">
+  <div class="row align-items-start">
+   <% @courses.each do |course| %>
+     <div class="col-lg-4 col-md-6 col-sm-12">
+    <%= render 'courses/course', course: course %>
+  </div>
+    <% end %>
+  </div>
   </div>
  
   </main>

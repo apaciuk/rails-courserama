@@ -4,31 +4,25 @@
     <%= link_to back_masquerade_path(current_user) do %><%= icon("fas", "times") %> Logout <% end %>
   </div>
 <% end %>
-
 <nav class="navbar navbar-expand-md navbar-dark bg-dark">
   <div class="container mx-auto">
     <%= link_to "COURSERAMA", root_path, class: "navbar-brand" %>
-
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMain" aria-controls="navbarsExample04" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
-
     <div class="collapse navbar-collapse" id="navbarMain">
       <ul class="navbar-nav me-auto mt-2 mt-md-0">
       </ul>
-     
-      <ul class="navbar-nav">
+     <ul class="navbar-nav">
      <%= form_tag(courses_path, :method => "get",   
      class: 'navbar-form navbar-left') do %>  
      <div class="input-group">  
      <%= text_field_tag :title, params[:title], placeholder: "Search Courses By Title", class: "form-control" %>  
      </div>  
      <% end %>
-        <li class="nav-item"><%= link_to "News", announcements_path, class: "nav-link mx-2 #{unread_announcements(current_user)}" %></li>
-          <li class="nav-item"><%= link_to "Latest Courses", courses_path, class: "btn btn-info nav-link" %></li>
-        <% if user_signed_in? %>
-   
-        <li class="nav-item">
+    <li class="nav-item"><%= link_to "News", announcements_path, class: "nav-link mx-2 #{unread_announcements(current_user)}" %></li>
+    <% if user_signed_in? %>
+    <li class="nav-item">
           <%= link_to notifications_path, class: "nav-link mx-2" do %>
             <span><i class="far fa-bell" aria-hidden="true"></i></span>
           <% end %>
@@ -47,7 +41,7 @@
               <%= link_to "Logout", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
             </div>
           </li>
-         <li class="nav-item"><%= link_to "Add New Course", new_course_path, class: "btn btn-success nav-link mx-2" %></li>
+         <li class="nav-item"><%= link_to "Add New Course", new_course_path, class: "btn btn-info nav-link mx-2" %></li>
                 
 
         <% else %>

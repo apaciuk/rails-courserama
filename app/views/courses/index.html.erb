@@ -1,18 +1,16 @@
-
 <div class="mt-5 mb-5">
-
 <h1>Latest Courses</h1>
 <h3 class="mb-4">Total Courses: <%= @courses.count %></h3>
 <div class="container" style="background:#efefef;padding:20px;">
-  <div class="row align-items-start">
-   <% @courses.each do |course| %>
-     <div class="col-lg-4 col-md-6 col-sm-12">
-    <%= render 'courses/course', course: course %>
-  </div>
-    <% end %>
-  </div>
-  </div>
-  </div>
+ <div class="row align-items-start">
+ <% @courses.each do |course| %>
+ <div class="col-lg-4 col-md-6 col-sm-12">
+<%= render 'courses/course', course: course %>
+</div>
+<% end %>
+</div>
+</div>
+</div>
 
    
    

@@ -1,5 +1,14 @@
 <div class="row mt-5 mb-5">
-<h1>Edit Course</h1>
-
+</div>
+<div class="card text-dark mb-5 bg-secondary">
+<div class="card-header">
+<h4>Edit Course</h4>
+</div>
+<div class="card-body">
 <%= render 'form', course: @course %>
+</div>
+<div class="card-footer mb-1">
+<%= link_to "Show", @course, class: "btn btn-sm btn-primary" %>
+<%= link_to "Back", courses_path, class: 'btn btn-sm btn-secondary' %>
+</div>
 </div>
