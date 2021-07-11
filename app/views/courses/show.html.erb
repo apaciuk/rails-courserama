@@ -1,17 +1,7 @@
 <div class="page-header mt-5 mb-5">
-  <div class="mb-3">
+<p><%= render_breadcrumbs %></p>
+<%= render 'courses/course', course: @course %>
   <%= link_to courses_path, class: 'btn btn-success' do %>
     All Courses
   <% end %>
-  <%= link_to edit_course_path(@course), class: 'btn btn-primary' do %>
-    Edit
-  <% end %>
-  </div>
-  <h2><%= @course.title %></h2>
-</div>
-<div class="card">
-<div class="card-body">
- <h3>Description</h3>
-<p><%= @course.description %></p>
-</div>
 </div>

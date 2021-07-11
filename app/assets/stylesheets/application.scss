@@ -14,13 +14,16 @@ $navbar-dark-bg: #473884;
     margin-right: 0;
   }
 }
-
 // Masquerade alert shouldn't have a bottom margin
 body > .alert {
   margin-bottom: 0;
 }
 .navbar-dark {
 background-color:#473884!important;
+}
+.bg-secondary {
+background-color:#b9348d!important;
+
 }
 .has-search .form-control {
   padding-left: 2.375rem;
@@ -36,4 +39,8 @@ background-color:#473884!important;
   text-align: center;
   pointer-events: none;
   color: #aaa;
+}
+.card-header h4 {
+text-transform:uppercase;
+font-size: 18px;
 }

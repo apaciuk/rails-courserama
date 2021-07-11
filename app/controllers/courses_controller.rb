@@ -1,8 +1,11 @@
 class CoursesController < ApplicationController
   before_action :set_course, only: %i[ show edit update destroy ]
 
+
   # GET /courses or /courses.json
   def index
+
+    add_breadcrumb "index", courses_path
     if params[:title]
     @courses = Course.where('title ILIKE ?', "%#{params[:title]}%") #case-insensitive
     else

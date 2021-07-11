@@ -51,7 +51,7 @@ group :test do
   gem 'webdrivers'
 end
 
-# Windows does not include zoneinfo files, so bundle the tzinfo-data gem
+gem 'breadcrumbs_on_rails', '~> 4.1'
 gem 'money-rails'
 gem 'acts_as_votable'
 gem 'cocoon'
