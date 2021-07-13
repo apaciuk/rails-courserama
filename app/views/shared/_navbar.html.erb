@@ -20,7 +20,9 @@
      <%= text_field_tag :title, params[:title], placeholder: "Search Courses By Title", class: "form-control" %>  
      </div>  
      <% end %>
-    <li class="nav-item"><%= link_to "News", announcements_path, class: "nav-link mx-2 #{unread_announcements(current_user)}" %></li>
+      <li class="nav-item"><%= link_to "Latest Courses", courses_path, class: "btn btn-primary nav-link mx-2" %></li>
+      <li class="nav-item"><%= link_to "Users", users_path, class: "btn btn-link nav-link mx-2" %></li>
+    <li class="nav-item"><%= link_to "News", announcements_path, class: "btn btn-link nav-link mx-2 #{unread_announcements(current_user)}" %></li>
     <% if user_signed_in? %>
     <li class="nav-item">
           <%= link_to notifications_path, class: "nav-link mx-2" do %>

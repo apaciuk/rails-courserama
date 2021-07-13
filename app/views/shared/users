@@ -1,0 +1,13 @@
+<div class="mt-5 mb-5">
+<h1>Users Online</h1>
+<h3 class="mb-4">Total Users: <%= @users.count %></h3>
+<div class="container" style="background:#efefef;padding:20px;">
+ <div class="row align-items-start">
+ <% @users.each do |user| %>
+ <div class="col-lg-4 col-md-6 col-sm-12">
+<%= render 'users/user', user: user %>
+</div>
+<% end %>
+</div>
+</div>
+</div>

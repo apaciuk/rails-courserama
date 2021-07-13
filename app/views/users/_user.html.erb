@@ -1,0 +1,33 @@
+<div class="card text-dark bg-secondary mb-5">
+<div class="card-header">
+<h4><i class="fa fa-user"></i> <%= user.email %> <%= image_tag avatar_path(current_user, size: 40), height: 24, width: 24, class: "rounded" %></h4>
+</div>
+<div class="card-body" style="background:#efefef;">
+<h4>Signed Up</h4>
+<%= time_ago_in_words(user.created_at) %>
+<p>ago</p>
+</div>
+<div class="card-footer" style="color:#404040;">
+<div class="row">
+Sign In Count
+<%= user.sign_in_count %>
+</div>
+<div class="row">
+Current Sign In At
+<%= user.current_sign_in_at %>
+</div>
+<div class="row">
+Last Sign In At
+<%= user.last_sign_in_at %>
+</div>
+<div class="row">
+Current Sign In IP
+<% user.current_sign_in_ip %>
+</div>
+<div class="row">
+Last Sign In IP
+<%= user.last_sign_in_ip %>
+</div>
+</div>
+
+</div>
