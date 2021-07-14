@@ -20,6 +20,22 @@
     <%= form.label :description, class: 'form-label' %>
     <%= form.text_area :description, class: 'form-control' %>
   </div>
+   <div class="mb-3">
+    <%= form.label :short_description, class: 'form-label' %>
+    <%= form.text_area :short_description, class: 'form-control' %>
+  </div>
+    <div class="mb-3">
+    <%= form.label :language, class: 'form-label' %>
+    <%= form.text_area :language, class: 'form-control' %>
+  </div>
+    <div class="mb-3">
+    <%= form.label :level, class: 'form-label' %>
+    <%= form.text_area :level, class:'form-control' %>
+    </div>
+    <div class="mb-3">
+    <%= form.label :price, class: 'form-label' %>
+    <%= form.text_area :price, class: 'form-control' %>
+  </div>
 
   
 
@@ -30,7 +46,7 @@
       </div>
     <% end %>
 
-    <%= form.submit class: 'btn btn-primary' %>
+    <%= form.submit class: 'btn btn-success' %>
 
     <% if course.persisted? %>
       <%= link_to "Cancel", course, class: "btn btn-warning" %>

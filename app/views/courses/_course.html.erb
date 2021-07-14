@@ -2,12 +2,18 @@
 <div class="card-header">
 <h4><i class="fa fa-book"></i> <%= link_to course.title, course_path(course), style: "color:#404040; text-decoration:none;" %></h4>
 </div>
-<div class="card-body">
-<%= course.description %>
+<div class="card-body bg-secondary">
+<h6><%= course.description %></h6>
+<p><%= course.short_description %></p>
+</div>
+<div class="card-footer">
+<i class="fa fa-globe-africa"></i>  <%= course.language %>
+<i class="fa fa-signal"></i> <%= course.level %> 
+<i class="fa fa-money-bill"></i> <%= number_to_currency(course.price) %> 
 </div>
 <div class="card-footer">
 <i class="fa fa-clock"></i>  <%= course.created_at.strftime('%d-%b-%y') %>
- <i class="fa fa-chalkboard-teacher"></i> <%= course.user %> <%= image_tag avatar_path(current_user, size: 40), height: 24, width: 24, class: "rounded" %>
+ <i class="fa fa-chalkboard-teacher"></i> <%= course.user %> 
 </div>
 <div class="card-footer mb-1">
 <%= link_to "Show", course, class: "btn btn-sm btn-primary" %>

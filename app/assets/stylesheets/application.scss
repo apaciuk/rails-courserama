@@ -22,14 +22,14 @@ body > .alert {
 background-color:#473884!important;
 }
 .bg-secondary {
-background-color:#f5f5f5!important;
+background-color:#efefef!important;
 }
 .btn-danger {
 border-color:#ec0f98;
 background-color:#ec0f98;
 }
 .course-grid {
-background-color: #efefef; 
+background-color: #efefef!important; 
 padding-left:50px;
 padding-right:50px;
 }
@@ -50,6 +50,7 @@ padding-right:50px;
 .card-header h4 {
 text-transform:uppercase;
 font-size: 18px;
+color: #473884!important;
 }
 .search .form-control {
   width: 100%;
