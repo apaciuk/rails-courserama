@@ -7,13 +7,27 @@
 <p><%= course.short_description %></p>
 </div>
 <div class="card-footer">
+<div class="row">
+<div class="col-md-6">
 <i class="fa fa-globe-africa"></i>  <%= course.language %>
+</div>
+<div class="col-md-6">
 <i class="fa fa-signal"></i> <%= course.level %> 
+</div>
+<div class="mt-3">
 <i class="fa fa-money-bill"></i> <%= number_to_currency(course.price) %> 
 </div>
+</div>
+</div>
 <div class="card-footer">
+<div class="row">
+<div class="col-md-6">
 <i class="fa fa-clock"></i>  <%= course.created_at.strftime('%d-%b-%y') %>
- <i class="fa fa-chalkboard-teacher"></i> <%= course.user %> 
+</div>
+<div class="col-md-6">
+ <%= course.user %> 
+ </div>
+ </div>
 </div>
 <div class="card-footer mb-1">
 <%= link_to "Show", course, class: "btn btn-sm btn-primary" %>
